@@ -3,17 +3,24 @@ import styles from "../components/NavBar.module.css";
 
 const Navbar = () => {
   return (
-    <nav>
-      <NavLink to={"/"}>
+    <nav className={styles.navbar}>
+
+      <NavLink to={"/"} className={styles.blog}>
         Mini <span>Blog</span>
       </NavLink>
 
-      <ul>
+      <ul className={styles.list}>
         <li>
              <NavLink to={"/"}>Home</NavLink>
         </li>
         <li>
-             <NavLink to={"/about"}>Sobre</NavLink>
+             <NavLink to={"/login"} >Entrar</NavLink>
+        </li>
+        <li>
+             <NavLink to={"/register"} >Cadastrar</NavLink>
+        </li>
+        <li>
+             <NavLink to={"/about"} >Sobre</NavLink>
         </li>
 
       </ul>
