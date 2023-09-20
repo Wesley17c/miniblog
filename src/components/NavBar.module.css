@@ -18,12 +18,14 @@
 
     color: black;
     font-weight: bold;
+    
 }
 
 .list {
     display: flex;
     list-style: none;
     gap: 35px;
+    
     
 }
 
@@ -35,6 +37,8 @@
     padding: 5px 15px;
     border-radius: 99px;
     font-weight: 500;
+
+    
 }
 
 .list a:hover{

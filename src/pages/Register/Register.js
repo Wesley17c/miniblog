@@ -1,51 +1,90 @@
 import styles from "./Register.module.css";
+import { useState, useEffect } from "react";
 
 const Register = () => {
+  const [displayName, setDisplayName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setError("");
+
+    const user = {
+      displayName,
+      email,
+      password,
+    };
+
+    if (password !== confirmPassword) {
+      setError("As senhas precisam ser iguais..");
+      return;
+    }
+
+    console.log(user);
+  };
+
   return (
-    <div>
+    <div className={styles.wrapper_container}>
       <h1>Cadastre-se para postar!</h1>
-      <p>cadastre-se para compartilhar suas histórias!</p>
-      <form>
-        <span>Nome:</span>
-        <input
-          type="text"
-          name="displayName"
-          required
-          placeholder="digite o seu nome"
-        />
-      </form>
+      <h3>Compartilhe suas histórias!</h3>
 
-      <form>
-        <span>E-mail:</span>
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder="digite o seu e-mail"
-        />
-      </form>
+      <form onSubmit={handleSubmit}>
+        <label className={styles.forms}>
+          <span> Digite seu nome</span>
+          <input
+            type="text"
+            name="displayName"
+            required
+            placeholder="digite o seu nome"
+            value={displayName}
+            onChange={(e) => setDisplayName(e.target.value)}
+          />
+        </label>
 
-      <form>
-        <span>Senha:</span>
-        <input
-          type="password"
-          name="password"
-          required
-          placeholder="digite sua senha"
-        />
-      </form>
+        <label className={styles.forms}>
+          <span>Digite seu e-mail</span>
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="digite o seu e-mail"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </label>
 
-      <form>
-        <span>Confirme sua senha:</span>
-        <input
-          type="password"
-          name="confirmPassword"
-          required
-          placeholder="confirme sua senha"
-        />
-      </form>
-      <button> Cadastrar</button>
+        <label className={styles.forms}>
+          <span>Digite sua senha</span>
+          <input
+            type="password"
+            name="password"
+            required
+            placeholder="digite sua senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </label>
 
+        <label className={styles.forms}>
+          <span>Confirme sua senha</span>
+          <input
+            type="password"
+            name="confirmPassword"
+            required
+            placeholder="confirme sua senha"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+        </label>
+
+        <button className={styles.btn}> Cadastrar</button>
+
+            {error && <p className={styles.error}>{error}</p>}
+      </form>
     </div>
   );
 };
