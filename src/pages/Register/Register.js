@@ -37,13 +37,15 @@ const Register = () => {
 
 
   return (
+
     <div className={styles.wrapper_container}>
+
       <h1>Cadastre-se para postar!</h1>
       <h3>Compartilhe suas histórias!</h3>
 
-      <form onSubmit={handleSubmit}>
+      <form className={styles.formulario} onSubmit={handleSubmit}>
         <label className={styles.forms}>
-          <span> Digite seu nome</span>
+          <span> Insira seu nome</span>
           <input
             type="text"
             name="displayName"
@@ -55,7 +57,7 @@ const Register = () => {
         </label>
 
         <label className={styles.forms}>
-          <span>Digite seu e-mail</span>
+          <span>Insira seu e-mail</span>
           <input
             type="email"
             name="email"
@@ -67,7 +69,7 @@ const Register = () => {
         </label>
 
         <label className={styles.forms}>
-          <span>Digite sua senha</span>
+          <span>Insira sua senha</span>
           <input
             type="password"
             name="password"

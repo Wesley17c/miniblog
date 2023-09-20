@@ -1,5 +1,7 @@
 .container{
   min-height: 75vh;
-  background-image: linear-gradient(rgb(250, 249, 249), rgb(209, 235, 250));
+  background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
   padding-top: 7em;
+  
+
 }

@@ -2,9 +2,10 @@
     display: flex;
     justify-content: space-between;
     padding: 1.5em 6em;
-    background-color: rgba(182, 182, 182, 0.226);
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
     align-items: center;
-    box-shadow: 2px 2px #3333331f;
+    border-bottom: #000000 2px solid;
+    
 
 }
 
