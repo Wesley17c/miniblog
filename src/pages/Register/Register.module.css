@@ -79,10 +79,11 @@
 }
 
 .error{
-    background-color: rgba(255, 0, 0, 0.397);
+    background-color: rgba(132, 169, 218, 0.397);
     padding: 10px 0px;
     font-size: 15px;
     margin-top: 1em;
     border-radius: 9px;
     text-align: center;
+    color: rgb(235, 7, 7);
 }
