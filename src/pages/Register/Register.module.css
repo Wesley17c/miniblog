@@ -47,11 +47,11 @@
 
 .forms input{
     background: rgba(255, 255, 255, 0.596);
-    box-shadow: 0 2px 2px 0 rgba(34, 46, 209, 0.37);
+    box-shadow: 0 2px 2px 0 rgba(33, 33, 39, 0.37);
     backdrop-filter: blur( 8.5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 10px 60px;
+    border: none;
+    border-radius: 9px;
 }
 
 .forms input::placeholder{
@@ -60,9 +60,7 @@
     text-align: center;
 }
 
-.forms .btn{
-    
-}
+
 .btn{
     margin-top: 1em;
     padding: 20px;
@@ -82,8 +80,9 @@
 
 .error{
     background-color: rgba(255, 0, 0, 0.397);
-    padding: 10px;
-    font-size: 25px;
+    padding: 10px 0px;
+    font-size: 15px;
     margin-top: 1em;
     border-radius: 9px;
+    text-align: center;
 }

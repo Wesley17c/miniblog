@@ -1,6 +1,8 @@
 import styles from "./Register.module.css";
 import { useState, useEffect } from "react";
 
+
+
 const Register = () => {
   const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
@@ -8,16 +10,20 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
+
+  // função que será ativada ao clicar em cadastrar, e suas validações de form
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setError("");
+    setError(""); 
 
+    // o que será necessário para cadastro do usuário
     const user = {
       displayName,
       email,
       password,
     };
+
 
     if (password !== confirmPassword) {
       setError("As senhas precisam ser iguais..");
@@ -25,7 +31,10 @@ const Register = () => {
     }
 
     console.log(user);
+    
   };
+
+
 
   return (
     <div className={styles.wrapper_container}>
