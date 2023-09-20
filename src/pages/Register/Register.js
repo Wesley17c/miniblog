@@ -40,8 +40,8 @@ const Register = () => {
 
     <div className={styles.wrapper_container}>
 
-      <h1>Cadastre-se para postar!</h1>
-      <h3>Compartilhe suas histórias!</h3>
+      <h1>Cadastre-se para postar</h1>
+      <h3> E compartilhe e suas histórias!</h3>
 
       <form className={styles.formulario} onSubmit={handleSubmit}>
         <label className={styles.forms}>
