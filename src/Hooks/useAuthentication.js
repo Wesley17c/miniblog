@@ -1,4 +1,6 @@
-import {db} from '../firebase/config'
+import { db } from '../firebase/firebase';
+
+
 
 import {
     getAuth,
@@ -6,7 +8,8 @@ import {
     signInWithEmailAndPassword,
     updateProfile,
     signOut
-} from 'firebase/auth'; // Certifique-se de que seja 'firebase/auth' em vez de 'firebise/auth'
+
+} from 'firebase/auth'; 
 
 import { useState, useEffect } from 'react';
 
@@ -17,7 +20,7 @@ export const useAuthentication = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(null);
 
-    // clearup 
+    
     const [cancel, setCancel] = useState(false);
 
 
@@ -37,7 +40,7 @@ export const useAuthentication = () => {
         setLoading(true);
 
         try {
-                    //função que originará um user
+                    
             const {user} = await createUserWithEmailAndPassword(
                 auth,
                 data.email,
@@ -55,7 +58,7 @@ export const useAuthentication = () => {
             console.log(error.message);
             console.log(typeof error.message)
         }
-        // após o termino da função, definimos o loading como false
+        
         setLoading(false)
     };
 

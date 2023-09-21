@@ -1,7 +1,6 @@
 
+import { useAuthentication } from "../../Hooks/useAuthentication";
 
-
-import { useAuthentication } from "../../Hooks/UseAuthentication";
 import styles from "./Register.module.css";
 import { useState, useEffect } from "react";
 
@@ -14,7 +13,7 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
-  const {createUser, error: authError, loading, auth} = useAuthentication();
+   const {createUser, error: authError, loading} = useAuthentication();
 
 
   // função que será ativada ao clicar em cadastrar, e suas validações de form
@@ -54,7 +53,7 @@ const Register = () => {
       <form className={styles.formulario} onSubmit={handleSubmit}>
 
         <label className={styles.forms}>
-          <span> Insira seu nome</span>
+          <span> Nome</span>
           <input
             type="text"
             name="displayName"
@@ -66,7 +65,7 @@ const Register = () => {
         </label>
 
         <label className={styles.forms}>
-          <span>Insira seu e-mail</span>
+          <span>E-mail</span>
           <input
             type="email"
             name="email"
@@ -78,7 +77,7 @@ const Register = () => {
         </label>
 
         <label className={styles.forms}>
-          <span>Insira sua senha</span>
+          <span>Senha</span>
           <input
             type="password"
             name="password"

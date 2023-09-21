@@ -4,7 +4,7 @@
     padding: 1.5em 6em;
     background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
     align-items: center;
-    border-bottom: #000000 2px solid;
+    border-bottom: #fdfdfd 2px solid;
     
 
 }
@@ -12,12 +12,13 @@
 .blog{
     text-decoration: none;
     font-size: 25px;
-    color: #333;
+    color: #9f01ea;
+    font-weight: 500;
 }
 
 .blog span{
 
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     
 }
@@ -33,23 +34,17 @@
 .list a{
     text-decoration: none;
     font-size: 20px;
-    color: #333;
-    background-color: #ffff;
+    color: #ffffff;
     padding: 5px 15px;
-    border-radius: 99px;
     font-weight: 500;
+    transition: 2ms;
 
     
 }
 
 .list a:hover{
 
-    text-decoration: none;
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #000000;
-    padding: 5px 15px;
-    border-radius: 99px;
-    font-weight: 500;
+    color: black;
+    font-weight: 600;
 
 }
