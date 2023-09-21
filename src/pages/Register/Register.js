@@ -1,3 +1,6 @@
+
+import { useAuthentication } from "../../Hooks/UseAuthentication"; 
+
 import styles from "./Register.module.css";
 import { useState, useEffect } from "react";
 
@@ -10,9 +13,11 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
+  const {createUser, error: authError, loading, auth} = useAuthentication();
+
 
   // função que será ativada ao clicar em cadastrar, e suas validações de form
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setError(""); 
@@ -30,7 +35,9 @@ const Register = () => {
       return;
     }
 
-    console.log(user);
+   const resposta = await createUser(user);
+
+    console.log(resposta);
     
   };
 
