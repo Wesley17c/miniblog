@@ -26,7 +26,7 @@ const Register = () => {
 
 
     if (password !== confirmPassword) {
-      setError("As senhas precisam ser iguais..");
+      setError("As senhas precisam ser iguais");
       return;
     }
 
@@ -41,9 +41,10 @@ const Register = () => {
     <div className={styles.wrapper_container}>
 
       <h1>Cadastre-se para postar</h1>
-      <h3> E compartilhe e suas histórias!</h3>
+      <h3> Crie seu usuário e compartilhe e suas histórias</h3>
 
       <form className={styles.formulario} onSubmit={handleSubmit}>
+
         <label className={styles.forms}>
           <span> Insira seu nome</span>
           <input
