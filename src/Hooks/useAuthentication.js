@@ -38,6 +38,7 @@ export const useAuthentication = () => {
         chekIniSCancel();
 
         setLoading(true);
+        setError(null)
 
         try {
                     
@@ -50,16 +51,35 @@ export const useAuthentication = () => {
             //iremos passar nosso user junto de um obj com os dados
             await updateProfile(user, {
                 displayName: data.displayName
-            })
+            });
+
+            setLoading(false)
 
             return user
 
         } catch (error) {
             console.log(error.message);
-            console.log(typeof error.message)
+            console.log(typeof error.message);
+
+            let systemErrorMessage 
+
+            if (error.message.includes('Password')) {
+                systemErrorMessage = 'A senha precisa conter ao menos 6 caracteres'
+                
+            } else if(error.message.includes('email-already')){
+                systemErrorMessage = 'E-mail já cadastrado'
+            }else { 
+                systemErrorMessage = 'Ocorreu um erro, por favor tente mais tarde.'
+
+            }
+            
+            setLoading(false)
+            setError(systemErrorMessage);
         }
+
         
-        setLoading(false)
+        
+        
     };
 
     // manterá o cancel como true assim que sair da page

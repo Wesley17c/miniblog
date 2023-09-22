@@ -42,6 +42,18 @@ const Register = () => {
   };
 
 
+  // substituindo o erro atual do set pelo autherro traduzido por meio do useffect
+  useEffect(()=>{
+
+    if(authError){
+      setError(authError)
+    }
+
+  },[authError])
+
+
+
+
 
   return (
 
@@ -100,7 +112,8 @@ const Register = () => {
           />
         </label>
 
-        <button className={styles.btn}> Cadastrar</button>
+        {!loading && <button className={styles.btn}> Cadastrar</button>}
+        {loading && <button className={styles.btn} disabled> Aguarde</button>}
 
             {error && <p className={styles.error}>{error}</p>}
       </form>
