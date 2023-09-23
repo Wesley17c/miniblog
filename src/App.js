@@ -1,5 +1,15 @@
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import './App.css';
+// mapeamneto se a auth do user foi feita de forma correta
+import { onAuthStateChanged } from 'firebase/auth';
+
+
+
+//HOOKS
+import  {useState, useEffect} from 'react'
+import { useAuthentication } from './useAuthentication';
+
+
 
 //CONTEXT
 import { AuthProvider } from './Context/AuthContext';
@@ -13,10 +23,35 @@ import Register from './pages/Register/Register';
 
 
 function App() {
+
+    const [user, setUser] = useState(undefined);
+    const {auth} = useAuthentication();
+
+
+    useEffect(()=>{
+
+       onAuthStateChanged(auth, (user)=> {
+
+        setUser(user);
+
+      });
+
+        
+
+    },[auth]);
+
+
+    const loadingUser = user === undefined;
+
+    if(loadingUser){
+      return <p>Carregando dados...</p>
+    }
+
+
   return (
     <div className="App">
       
-      <AuthProvider>
+      <AuthProvider value={{user}} >
 
       <BrowserRouter>
         <Navbar/>
