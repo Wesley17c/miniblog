@@ -61,10 +61,11 @@ function App() {
              <Routes>
                 <Route path='/' element={<Home/>} />
                 <Route path='/about' element={<About/>}/>
-                <Route path='/login' element={<Login/>}/>
-                <Route path='/register' element={<Register/>}/>
-                <Route path='/post/create' element={<CreatePost/>} />
-                <Route path='/dashboard' element={<Dashboard/>} />
+                <Route path='/login' element={!user ? <Login/> : <Navigate to={'/'}/> }/>
+                <Route path='/register' element={!user ? <Register/> : <Navigate to={'/'}/>}/>
+                {/* se o user tiver conectado, ele pode criar post e acessar a dash, se n tiver é direcionado para o login */}
+                <Route path='/post/create' element={user ? <CreatePost/> : <Navigate to={'/login'}/>} />
+                <Route path='/dashboard' element={user ? <Dashboard/> : <Navigate to={'/login'}/>} />
             </Routes>
          </div>
          <Footer/>

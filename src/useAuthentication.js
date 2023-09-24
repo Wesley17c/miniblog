@@ -1,7 +1,5 @@
 import { db } from './firebase/firebase';
 
-
-
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -34,6 +32,7 @@ export const useAuthentication = () => {
         }
     }
 
+    // registrando usuario no sistema
     const createUser = async (data)=> {
         chekIniSCancel();
 
@@ -77,10 +76,23 @@ export const useAuthentication = () => {
             setError(systemErrorMessage);
         }
 
-        
-        
-        
+    
     };
+
+    // logout - sign out
+
+    const logout = ()=>{
+        
+        chekIniSCancel();
+
+        signOut(auth)
+
+    }
+
+
+
+
+
 
     // manterá o cancel como true assim que sair da page
     useEffect(()=>{
@@ -94,6 +106,7 @@ export const useAuthentication = () => {
         auth,
         createUser,
         error,
-        loading
+        loading,
+        logout,
     }
 };

@@ -1,0 +1,57 @@
+.sobre{
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 700px;
+    text-align: center;
+    
+
+}
+
+.sobre h2{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 1em;
+}
+
+.sobre h2 span{
+    font-weight: bold;
+    font-size: 45px;
+    
+}
+
+.sobre p {
+
+    font-size: 25px;
+    color: white;
+    margin-bottom: 1em;
+}
+
+
+
+
+
+
+
+.btn{
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    border-radius: 25px;
+    width: 170px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    transition: 2ms;
+    display: block;
+    margin: auto;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover{
+
+    background: linear-gradient(115deg, #56d8e491 10%, #a001ea9a 90%);
+    color: #333;
+}

@@ -3,8 +3,10 @@ import styles from "../components/NavBar.module.css";
 import { useAuthentication } from "../useAuthentication";
 import { useAuthValue } from "../Context/AuthContext";
 
+
 const Navbar = () => {
   const { user } = useAuthValue();
+  const {logout} = useAuthentication();
 
   return (
     <nav className={styles.navbar}>
@@ -42,6 +44,14 @@ const Navbar = () => {
         <li>
           <NavLink to={"/about"}>Sobre</NavLink>
         </li>
+
+          {user && (
+            <li >
+              <NavLink onClick={logout}> Sair </NavLink>
+            </li>
+            )
+          }
+
       </ul>
     </nav>
   );
