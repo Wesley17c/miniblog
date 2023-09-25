@@ -58,7 +58,7 @@ export const useAuthentication = () => {
             return user
 
         } catch (error) {
-            
+         
             console.log(error.message);
             console.log(typeof error.message);
 
@@ -107,7 +107,7 @@ export const useAuthentication = () => {
 
 
 
-        } catch (error) {
+        } catch (error) {          
             console.log(error.message);
             console.log(typeof error.message);
             
