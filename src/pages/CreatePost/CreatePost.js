@@ -2,6 +2,7 @@ import styles from "./CreatePost.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthValue } from "../../Context/AuthContext";
+import { useInsertDocument } from "../../Hooks/useInsertDocument";
 
 const CreatePost = () => {
   const [title, setTitle] = useState("");
@@ -10,17 +11,44 @@ const CreatePost = () => {
   const [body, setBody] = useState("");
   const [formError, setFormError] = useState("");
 
+  const {user} = useAuthValue();
+
+  const {insertDocument, response} = useInsertDocument('post');
+
   const handleSubmit = (e) => {
-    e.prevenyDefault();
+    e.preventDefault();
+    setFormError('')
+
+    //validação de imagem
+
+
+    //criar array de tags
+  
+
+
+    //checar todos os valores
+
+    insertDocument({
+      title,
+      image,
+      tags,
+      body,
+      uid: user.uid,
+      createBy: user.displayName
+    })
+
+
+    //redirecionamento de páginas
+
   };
 
   return (
-    <div>
+    <div className={styles.wrapper_container}>
       <h2>Crie seu post</h2>
       <p>Escreva sobre o que quiser e compartilhe os seus conhecimentos.</p>
 
-      <form onClick={handleSubmit}>
-        <label>
+      <form onClick={handleSubmit} className={styles.formulario}>
+        <label className={styles.forms} >
           <span>Título do post</span>
           <input
             type="text"
@@ -32,8 +60,8 @@ const CreatePost = () => {
           />
         </label>
 
-        <label>
-          <span>IURL da imagem</span>
+        <label className={styles.forms}>
+          <span>URL da imagem</span>
           <input
             type="text"
             name="image"
@@ -44,7 +72,7 @@ const CreatePost = () => {
           />
         </label>
 
-        <label>
+        <label className={styles.forms}>
           <span>Conteúdo</span>
           <textarea
             name="body"
@@ -55,7 +83,7 @@ const CreatePost = () => {
           ></textarea>
         </label>
 
-        <label>
+        <label className={styles.forms}>
           <span>Tags</span>
           <input
             type="text"
@@ -67,7 +95,11 @@ const CreatePost = () => {
           />
         </label>
 
-        <button className={styles.btn}> Cadastrar</button>
+        
+        {!response.loading && <button className={styles.btn}> Cadastrar</button>}
+        {response.loading && <button className={styles.btn} disabled> Aguarde</button>}
+
+            {response.error && <p className={styles.error}>{response.error}</p>}
 
       </form>
 
