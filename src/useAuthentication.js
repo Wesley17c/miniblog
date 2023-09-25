@@ -5,7 +5,8 @@ import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     updateProfile,
-    signOut
+    signOut,
+    
 
 } from 'firebase/auth'; 
 
@@ -57,6 +58,7 @@ export const useAuthentication = () => {
             return user
 
         } catch (error) {
+            
             console.log(error.message);
             console.log(typeof error.message);
 
@@ -87,13 +89,50 @@ export const useAuthentication = () => {
 
         signOut(auth)
 
-    }
+    };
+
+    //login
+
+    const login = async (dados)=>{
+
+        chekIniSCancel();
+
+        setLoading(true);
+        setError(null);
+
+        try {
+            
+            await signInWithEmailAndPassword(auth, dados.email, dados.password);
+            setLoading(false);
 
 
 
+        } catch (error) {
+            console.log(error.message);
+            console.log(typeof error.message);
+            
 
+            let systemErrorMessageLogin
 
+            if (error.message.includes('user-not-found')) {
+                systemErrorMessageLogin = 'Usuário não encontrado'
+                
+            } else if(error.message.includes('auth/invalid-login-credentials')){
+                systemErrorMessageLogin = 'Senha incorreta'
+            }else { 
+                systemErrorMessageLogin = 'Ocorreu um erro, por favor tente mais tarde.'
 
+            };
+            
+            
+            setError(systemErrorMessageLogin);
+            setLoading(false);
+            
+
+        };
+    };
+
+   
     // manterá o cancel como true assim que sair da page
     useEffect(()=>{
 
@@ -108,5 +147,7 @@ export const useAuthentication = () => {
         error,
         loading,
         logout,
+        login,
+        db,
     }
 };

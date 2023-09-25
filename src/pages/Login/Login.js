@@ -12,7 +12,7 @@ const Login = () => {
   
   const [error, setError] = useState("");
 
-   const {createUser, error: authError, loading} = useAuthentication();
+   const {login, error: authError, loading} = useAuthentication();
 
 
   // função que será ativada ao clicar em cadastrar, e suas validações de form
@@ -30,7 +30,7 @@ const Login = () => {
 
 
 
-   const resposta = await createUser(user);
+   const resposta = await login(user);
 
     console.log(resposta);
     
@@ -45,29 +45,6 @@ const Login = () => {
     }
 
   },[authError])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   return (
@@ -108,6 +85,7 @@ const Login = () => {
       {loading && <button className={styles.btn} disabled> Aguarde</button>}
 
           {error && <p className={styles.error}>{error}</p>}
+          
     </form>
   </div>
   )
