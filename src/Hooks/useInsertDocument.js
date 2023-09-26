@@ -2,7 +2,7 @@
 
 
 import {db} from '../firebase/firebase'
-import { useState, useEffect, Reducer, useReducer } from 'react'
+import { useState, useEffect, useReducer } from 'react'
 import { collection, addDoc, Timestamp } from 'firebase/firestore'
 
 const initialState = {

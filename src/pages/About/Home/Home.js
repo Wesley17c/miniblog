@@ -8,9 +8,7 @@ const Home = () => {
 
   const [busca, setBusca] = useState("");
   const [posts] = useState([]);
-  const navigate = useNavigate();
-
-  navigate()
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,8 +28,9 @@ const Home = () => {
             value={busca}
           />
         </label>
-
-        <button className={styles.btn}> buscar </button>
+        <>
+        <button className={styles.btn2}> Pesquisar </button>
+        </>
         
       </form>
 
