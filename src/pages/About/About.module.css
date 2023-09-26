@@ -48,6 +48,7 @@
     margin: auto;
     text-decoration: none;
     text-align: center;
+    border: #333 2px solid;
 }
 
 .btn:hover{

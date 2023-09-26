@@ -1,3 +1,139 @@
-.h1{
-    color: aqua;
+.wrapper_container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+
+}
+
+.wrapper_container h1{
+    margin: 0.2em 0;
+    font-size: 42px;
+    color: white;
+    /* background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     */
+    
+}
+
+.wrapper_container h2{
+    margin-bottom: 1.5em;
+    /* background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 1em;
+    
+}
+.formulario{
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.forms{
+    
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.forms ::placeholder{
+    color: rgba(255, 255, 255, 0.342);
+    
+}
+
+.forms span{
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    
+}
+
+.forms input {
+
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid #fdfcfc;
+    padding: 10px;
+    width: 400px;
+    caret-color: white;
+    outline: none;
+    color: white;
+    
+}
+
+.forms input:focus {
+    outline: none;
+    border-bottom: 1px solid #fdfcfc;
+}
+
+.btn{
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    border-radius: 25px;
+    width: 170px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    transition: 2ms;
+    display: block;
+    margin: auto;
+}
+
+.btn:hover{
+
+    background: linear-gradient(115deg, #56d8e491 10%, #a001ea9a 90%);
+    color: #333;
+}
+.error{
+    width: 350px;
+    background-color: rgba(255, 0, 0, 0.329);
+    border-radius: 25px;
+    color: black;
+    text-align: center;
+    padding: 10px 13px ;
+    font-weight: 900;
+}
+
+.list {
+   
+    list-style: none;
+    gap: 35px;
+    
+    
+}
+
+.list a{
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    border-radius: 25px;
+    width: 170px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    transition: 2ms;
+    display: block;
+    margin: auto;
+    text-decoration: none;
+    border: #333 2px solid;
+}
+
+.list a:hover{
+
+    color: black;
+    font-weight: 600;
+
 }
