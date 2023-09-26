@@ -15,23 +15,39 @@ const CreatePost = () => {
 
   const {insertDocument, response} = useInsertDocument('post');
 
+  const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormError('')
 
     //validação de imagem
-
+    try {
+      new URL(image)
+    } catch (error) {
+      setFormError('A imagem precisa ser em URL')
+    }
 
     //criar array de tags
-  
+    
+    const tagArray = tags
+
+
+    if(!title || !image || !tags || !body){
+      setFormError('Por favor, preencha todos os campos')
+
+    } 
 
 
     //checar todos os valores
 
+
+    if(formError) return;
+
     insertDocument({
       title,
       image,
-      tags,
+      tagArray,
       body,
       uid: user.uid,
       createBy: user.displayName
@@ -39,6 +55,7 @@ const CreatePost = () => {
 
 
     //redirecionamento de páginas
+    navigate('/');
 
   };
 
@@ -47,7 +64,7 @@ const CreatePost = () => {
       <h2>Crie seu post</h2>
       <p>Escreva sobre o que quiser e compartilhe os seus conhecimentos.</p>
 
-      <form onClick={handleSubmit} className={styles.formulario}>
+      <form onSubmit={handleSubmit} className={styles.formulario}>
         <label className={styles.forms} >
           <span>Título do post</span>
           <input
@@ -90,8 +107,8 @@ const CreatePost = () => {
             name="tags"
             required
             placeholder="Insira suas tags separadas por vírgulas"
-            onChange={(e) => setTags(e.target.value)}
-            value={tags}
+            onChange={(e) => setTags(e.target.value.split(','))}
+            value={tags.join(',')}
           />
         </label>
 
@@ -100,6 +117,7 @@ const CreatePost = () => {
         {response.loading && <button className={styles.btn} disabled> Aguarde</button>}
 
             {response.error && <p className={styles.error}>{response.error}</p>}
+            {formError && <p className={styles.error}>{formError}</p>}
 
       </form>
 
