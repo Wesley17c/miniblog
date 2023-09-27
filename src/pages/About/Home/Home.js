@@ -16,7 +16,8 @@ const Home = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  console.log(posts)
+  
+  
   return (
     <div className={styles.wrapper_container}>
       <h1 className={styles.h1}>Veja os nossos posts mais recentes</h1>
