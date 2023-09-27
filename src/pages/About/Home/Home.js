@@ -1,13 +1,15 @@
 import styles from "../Home/Home.module.css";
 
 // HOOKS
-import { useNavigate, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import { useState } from "react";
+import { useFetchDocuments } from "../../../Hooks/useFetchDocuments";
 
 const Home = () => {
 
   const [busca, setBusca] = useState("");
-  const [posts] = useState([]);
+  const {documents: posts, loading}= useFetchDocuments('posts');
+  
   
 
   const handleSubmit = (e) => {
@@ -36,7 +38,10 @@ const Home = () => {
 
       <div className={styles.wrapper_container}>
         
-      <h2>posts</h2>
+        {loading && <p>carregando...</p>}
+        {posts && posts.map((post) => (
+          <h2> {post.title} </h2>
+        ))}
 
         {posts && posts.length === 0 && (
           <div className={styles.list}>

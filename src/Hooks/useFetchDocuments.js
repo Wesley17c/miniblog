@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { db } from "../firebase/firebase";
+
 import {
   collection,
   query,
@@ -11,13 +12,14 @@ import {
 export const useFetchDocuments = (docCollection, search = null, uid = null) => {
   const [documents, setDocuments] = useState(null);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   // memory leak
   const [cancel, setCancel] = useState(false);
 
   useEffect(() => {
-    async function loadData() {
+     async  function loadData() {
+
       if (cancel) return;
 
       setLoading(true);
@@ -49,6 +51,8 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
 
         setLoading(false);
       }
+
+      
     }
 
     loadData();
@@ -58,5 +62,5 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
     return () => setCancel(true);
   }, []);
 
-  return documents, loading, error;
+  return {documents, loading, error}
 };
