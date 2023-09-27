@@ -6,7 +6,7 @@ import {
   query,
   orderBy,
   onSnapshot,
-  where,
+  
 } from "firebase/firestore";
 
 export const useFetchDocuments = (docCollection, search = null, uid = null) => {
@@ -29,9 +29,7 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
       try {
         let q;
 
-        //busca
-
-        //dashboard
+        
 
         q = await query(collectionRef, orderBy("createdAt", "desc"));
 
@@ -42,7 +40,11 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
               ...doc.data(),
             }))
           );
+        }, (error) => {
+          console.error("Error getting documents: ", error);
+          setError(error.message);
         });
+        
 
         setLoading(false);
       } catch (error) {
