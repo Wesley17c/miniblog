@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 3em;
-    margin-bottom: 3em;
+    padding-bottom: 3em;
 }
 
 .container_post img {
@@ -15,10 +15,12 @@
 .container_post h2 {
     text-align: left;
     font-size: 40px;
+    color: white;
 }
 
 .container_post p {
-    font-size: 25px;
+   
+    font-size: 15px;
     text-align: left;
 }
 

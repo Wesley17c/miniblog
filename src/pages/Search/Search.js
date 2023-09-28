@@ -15,8 +15,8 @@ const Search = () => {
   
   return (
     
-    <div>
-      <h1>Buscando tags</h1>
+    <div className={styles.container_busca} >
+      <h1>Busca por tags</h1>
 
       <div>
 
@@ -24,8 +24,8 @@ const Search = () => {
           <div className={styles.list}>
             
             <>
-                <p>Não foram encontrados posts a partir da sua busca</p>
-                <Link to={"/"}> Voltar</Link>
+                <p className={styles.back}>Não foram encontrados posts a partir da sua busca</p>
+                <Link to={"/"} className={styles.back_home}> Voltar</Link>
             </>
 
           </div>
