@@ -8,7 +8,7 @@ const PostDetails = ({post}) => {
     <div className={styles.container_post}>
       <img src={post.image} alt={post.title} />
       <h2>{post.title}</h2>
-      <p> {post.createdBy} </p>
+      <p> {post.createBy} </p>
 
         <div>
 
