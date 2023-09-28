@@ -13,14 +13,14 @@ const Home = () => {
 
   
   const navigate = useNavigate();
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     
 
     if(busca){
-      return navigate(`/search?=${busca}`)
+      return navigate(`/search?q=${busca}`)
     }
 
   };
