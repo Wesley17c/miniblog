@@ -1,0 +1,37 @@
+.container_post{
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.container_post img {
+
+    width: 700px;
+    height: 600px;
+}
+
+.container_post h2 {
+    text-align: left;
+    font-size: 40px;
+}
+
+.container_post p {
+    font-size: 25px;
+    text-align: left;
+}
+
+.tag{
+    text-align: left;
+}
+
+.ler {
+
+    border: 1px solid white;
+    width: 70px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding:10px ;
+}
