@@ -1,7 +1,7 @@
 import styles from "../Home/Home.module.css";
 
 // HOOKS
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useFetchDocuments } from "../../../Hooks/useFetchDocuments";
 //COMPONENTS
@@ -12,9 +12,17 @@ const Home = () => {
   const { documents: posts, loading } = useFetchDocuments("post");
 
   
+  const navigate = useNavigate();
   
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    
+
+    if(busca){
+      return navigate(`/search?=${busca}`)
+    }
+
   };
   
   
