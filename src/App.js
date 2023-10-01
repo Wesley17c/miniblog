@@ -24,6 +24,8 @@ import CreatePost from './pages/CreatePost/CreatePost';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Search from './pages/Search/Search';
 import Post from './pages/Post/Post';
+import EditPost from './pages/EditPost/EditPost';
+
 
 
 function App() {
@@ -68,7 +70,10 @@ function App() {
                 <Route path='/login' element={!user ? <Login/> : <Navigate to={'/'}/> }/>
                 <Route path='/register' element={!user ? <Register/> : <Navigate to={'/'}/>}/>
                 {/* se o user tiver conectado, ele pode criar post e acessar a dash, se n tiver é direcionado para o login */}
+
+                <Route path='/post/edit/:id' element={user ? <EditPost/> : <Navigate to={'/login'}/>} />
                 <Route path='/post/create' element={user ? <CreatePost/> : <Navigate to={'/login'}/>} />
+
                 <Route path='/dashboard' element={user ? <Dashboard/> : <Navigate to={'/login'}/>} />
             </Routes>
          </div>

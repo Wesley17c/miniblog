@@ -23,9 +23,9 @@ const Post = () => {
           <p> {post.title} </p>
           <p> {post.body} </p>
           <h3> este post tratasse de</h3>
-          <p> {post.tagArray.map((tag)=> (
+          <div> {post.tagArray.map((tag)=> (
             <p key={tag}> <span>#</span>  {tag} </p>
-          )) } </p>
+          )) } </div>
       </>
      )}
     </div>
