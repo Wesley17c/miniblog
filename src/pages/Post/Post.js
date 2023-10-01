@@ -19,7 +19,7 @@ const Post = () => {
       <>
       
           <h1>{post.title} </h1>
-          <img src={post.image}   />
+          <img src={post.image} alt='imagem'  />
           <p> {post.title} </p>
           <p> {post.body} </p>
           <h3> este post tratasse de</h3>
