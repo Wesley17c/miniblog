@@ -10,12 +10,18 @@
 
     width: 700px;
     height: 600px;
+    border-radius: 5px;
 }
 
 .container_post h2 {
     text-align: left;
     font-size: 40px;
     color: #333;
+}
+
+.container_tags{
+    display: flex;
+    gap: 1em;
 }
 
 .container_post p {

@@ -17,7 +17,7 @@ const Home = () => {
     // Adiciona a classe 'scaled' após um pequeno atraso para ativar a transição
     const timer = setTimeout(() => {
       setAnimate(true);
-    }, 300);
+    }, 100);
     
     // Limpa o timer para evitar efeitos colaterais se o componente for desmontado antes do timer expirar
     return () => clearTimeout(timer);
@@ -75,10 +75,8 @@ const Home = () => {
         {posts && posts.length === 0 && (
 
           <div className={styles.list}>
-
-            <p>Não foram encontrados posts...</p>
-            <Link to={"/post/create"}> Clique aqui para criar</Link>
-
+                  <p>Não foram encontrados posts...</p>
+                  <Link to={"/post/create"}> Clique para criar</Link>
           </div>
         )}
 
