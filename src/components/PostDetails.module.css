@@ -15,13 +15,16 @@
 .container_post h2 {
     text-align: left;
     font-size: 40px;
-    color: white;
+    color: #333;
 }
 
 .container_post p {
-   
+    
     font-size: 18px;
     text-align: left;
+    color: #333;
+    
+    
 }
 
 .tag{
@@ -30,10 +33,10 @@
 
 .ler {
 
-    border: 1px solid white;
+    border: 1px solid #333;
     width: 70px;
     text-decoration: none;
-    color: white;
+    color: #333;
     font-weight: bold;
     padding:10px ;
 }

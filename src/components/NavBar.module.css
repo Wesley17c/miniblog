@@ -35,7 +35,7 @@
     text-decoration: none;
     font-size: 20px;
     color: #333333d0;
-    padding: 5px 15px;
+    padding: 5px;
     font-weight: 500;
     transition: 2ms;
 
@@ -45,6 +45,7 @@
 .list a:hover{
 
     color: black;
-    
+    text-decoration: dotted;
+    border-bottom: 2px solid #333;
 
 }
