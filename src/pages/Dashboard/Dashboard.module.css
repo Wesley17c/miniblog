@@ -1,0 +1,60 @@
+.acoes{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 15em;
+    margin-bottom: 1em;
+}
+p{
+    color: #333;
+}
+
+
+.btn {
+
+    text-decoration: none;
+    color: #333;
+    background-color: #81f5a3;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.acoes_btn{
+    display: flex;
+    gap: 1em;
+}
+
+.acoes_2{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15em;
+    
+
+}
+
+
+.btn {
+
+    text-decoration: none;
+    color: #333;
+    background-color: #81f5a3;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    width: 80px;
+    text-align: center;
+}
+
+
+.btn_excluir {
+
+    text-decoration: none;
+    color: #faf8f8;
+    background-color: #ce0707;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+}

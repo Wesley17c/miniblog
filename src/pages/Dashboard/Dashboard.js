@@ -1,4 +1,4 @@
-// import styles from './Dashboard.module.css';
+import styles from "./Dashboard.module.css";
 
 import { Link } from "react-router-dom";
 
@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import { useAuthValue } from "../../Context/AuthContext";
 import { useFetchDocuments } from "../../Hooks/useFetchDocuments";
 import { useDeleteDocument } from "../../Hooks/useDeleteDocument";
-
-
 
 const Dashboard = () => {
   const { user } = useAuthValue();
@@ -17,40 +15,46 @@ const Dashboard = () => {
 
   const { documents: posts, loading } = useFetchDocuments("post", null, uid);
 
-  const {deleteDocument} = useDeleteDocument('post');
-
-  
+  const { deleteDocument } = useDeleteDocument("post");
 
   return (
     <div>
       {loading && <p>Carregando posts</p>}
 
-      <h2>Perfil de usuário</h2>
-      <h3> Gerencie seus posts</h3>
+      <div className={styles.acoes}>
+        <h2>Perfil de usuário</h2>
+
+        <h3> Gerencie seus posts</h3>
+      </div>
+
       {posts && posts.length === 0 ? (
         <div>
           <p> Não foram encontrados posts</p>
-          <Link to={"/post/create"}> Criar primeiro post </Link>
+          <Link className={styles.btn} to={"/post/create"}>
+            {" "}
+            Criar primeiro post{" "}
+          </Link>
         </div>
       ) : (
-        
         <>
+          <div className={styles.acoes}>
+            <span>Título</span>
+            <span>Acões</span>
+          </div>
 
-              <div>
-                <span>Título</span>
-                <span>Acões</span>
-              </div>
-
-          
-            {posts && posts.map((post) => (
-              <div key={post.id}>
-                <h3 > {post.title} </h3>
-                <Link to={`/post/${post.id}`}>Ver</Link>
-                <Link to={`/post/edit/${post.id}`}>Editar</Link>
-                <button onClick={()=> deleteDocument(post.id)} >Excluir</button>
+          {posts &&
+            posts.map((post) => (
+              <div className={styles.acoes_2} key={post.id}>
+                <h3> {post.title} </h3>
+                <div className={styles.acoes_btn}>
+                  <Link className={styles.btn} to={`/post/${post.id}`}>Ver</Link>
+                  <Link className={styles.btn} to={`/post/edit/${post.id}`}>Editar</Link>
+                  <button className={styles.btn_excluir} onClick={() => deleteDocument(post.id)}>
+                    Excluir
+                  </button>
+                </div>
               </div>
             ))}
-          
         </>
       )}
     </div>
