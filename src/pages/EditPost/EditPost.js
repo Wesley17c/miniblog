@@ -25,7 +25,7 @@ const EditPost = () => {
 
       setTags(tagArray);
     }
-  }, [post]);
+  }, [post, tags]);
 
   const { user } = useAuthValue();
 

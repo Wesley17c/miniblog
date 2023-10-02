@@ -25,7 +25,7 @@ const Dashboard = () => {
     <div>
       {loading && <p>Carregando posts</p>}
 
-      <h2>Dashboard</h2>
+      <h2>Perfil de usuário</h2>
       <h3> Gerencie seus posts</h3>
       {posts && posts.length === 0 ? (
         <div>
@@ -33,6 +33,7 @@ const Dashboard = () => {
           <Link to={"/post/create"}> Criar primeiro post </Link>
         </div>
       ) : (
+        
         <>
 
               <div>
