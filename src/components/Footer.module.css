@@ -1,17 +1,13 @@
 .footer{
 
-    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
-    height: 200px;
+    
+    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-top:  2px solid #ffffff;
+    border-top:  2px solid #2b2a2a;
 
 
 }
 
-.footer h3, p  {
-    color: white;
-    padding-bottom: .5em;
-}
