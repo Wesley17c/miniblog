@@ -20,12 +20,16 @@ const EditPost = () => {
       setTitle(post.title);
       setBody(post.body);
       setImage(post.image);
-
-      const tagArray = tags.split(", ").map(tag => tag.trim());
-
-      setTags(tagArray);
+  
+      if (typeof post.tags === "string") {
+        const tagArray = post.tags.split(", ").map(tag => tag.trim());
+        setTags(tagArray);
+      } else {
+        
+        setTags([]);
+      }
     }
-  }, [post, tags]);
+  }, [post]);
 
   const { user } = useAuthValue();
 

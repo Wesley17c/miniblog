@@ -39,7 +39,7 @@ const Dashboard = () => {
         <>
           <div className={styles.acoes}>
             <span>Título</span>
-            <span>Acões</span>
+            <span>Ações</span>
           </div>
 
           {posts &&
