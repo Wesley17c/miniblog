@@ -1,3 +1,5 @@
+/* 
+
 .wrapper_container{
     position: relative;
     display: flex;
@@ -12,20 +14,13 @@
     margin: 0.2em 0;
     font-size: 42px;
     color: #333;
-    /* background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-     */
+   
     
 }
 
 .wrapper_container h2{
     
-    /* background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    
     
     color: #333;
     text-transform: uppercase;
@@ -146,9 +141,9 @@
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 0;
-    opacity: 0; /* Inicialmente, o texto está invisível */
-    transform: translateY(-10px); /* Move o texto para cima para criar um efeito de entrada */
-    transition: opacity 1s ease-in-out, transform 2s ease-in-out, font-size 1s ease-in-out; /* Adicionado uma transição para font-size */
+    opacity: 0; 
+    transform: translateY(-10px); 
+    transition: opacity 1s ease-in-out, transform 2s ease-in-out, font-size 1s ease-in-out; 
   }
   
   .scaled {
@@ -161,4 +156,4 @@
   
  
   
-
+ */
