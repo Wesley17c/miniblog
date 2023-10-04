@@ -1,4 +1,4 @@
-/* 
+
 
 .wrapper_container{
     position: relative;
@@ -6,35 +6,23 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-   
+    margin-top: 3em;
 
 }
 
 .wrapper_container h1{
-    margin: 0.2em 0;
-    font-size: 42px;
+    margin-top: 1em;
+    font-size: 35px;
     color: #333;
+    margin-bottom: .8em;
    
     
 }
 
-.wrapper_container h2{
-    
-    
-    
-    color: #333;
-    text-transform: uppercase;
-    margin-top: 1em;
-    margin-bottom: 0;
-    
-}
-
-
-
 
 
 .formulario{
-    margin-top: 2em;
+   
     display: flex;
     gap: 10px;
     box-sizing: border-box;
@@ -44,13 +32,11 @@
 }
 
 
-
-
 .forms{
     
     display: flex;
     flex-direction: column;
-    margin-bottom: 1em;
+    
 }
 
 .forms ::placeholder{
@@ -58,20 +44,13 @@
     
 }
 
-.forms span{
-    margin-bottom: 5px;
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
-    
-}
 
 .forms input {
-
+    
     border: none;
     background-color: rgba(240, 17, 17, 0);
     border-bottom: 1px solid #333;
-    padding: 15px;
+    padding: 8px;
     width: 400px;
     caret-color: white;
     outline: none;
@@ -86,57 +65,11 @@
 }
 
 
-.btn2{
-    background-color: #3333331c;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 15px;
-    color: #333;
-    transition: 2ms;
-    display: block;
-    margin: auto;
-    box-sizing: border-box;
-    padding: 5px;
-}
 
-.btn2:hover{
-
-    background: #333333c5;
-    color: #333;
-}
-.error{
-    width: 350px;
-    background-color: rgba(255, 0, 0, 0.329);
-    border-radius: 25px;
-    color: black;
-    text-align: center;
-    padding: 10px 13px ;
-    font-weight: 900;
-}
-
-.list p{
-   
-    list-style: none;
-    gap: 35px;
-    color: #333;
-    margin-bottom: 1em;
-    
-    
-}
-
-.list a {
-
-    text-decoration: none;
-    color: #333;
-    background-color: #81f5a3;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #333;
-}
 
 .texto {
   
-    margin-top: -3.8em;
+    
     position: absolute;
     font-size: 22px;
     font-weight: 700;
@@ -156,4 +89,4 @@
   
  
   
- */
+ 
