@@ -1,21 +1,28 @@
+.wrapper_container{
+    height: 100vh;
+    margin-top: 5em;
+}
 .acoes{
     display: flex;
     justify-content: space-between;
-    margin: 0px 15em;
-    margin-bottom: 1em;
+    margin: 0em 15em ;
+    
+    
 
 }
 
 p {
     color: #333;
 }
-.acoes h3, h2 {
+.acoes h3 {
     font-size: 40px;
+    margin-bottom: 1em;
 }
 
 .acoes span{
     font-size: 25px;
     font-weight: 600;
+    margin-bottom: .6em;
 }
 
 .btn {
@@ -52,6 +59,7 @@ p {
     border: 1px solid #333;
     width: 80px;
     text-align: center;
+    margin-top: .5em;
 }
 
 
@@ -66,4 +74,5 @@ p {
     width: 80px;
     text-align: center;
     cursor: pointer;
+    margin-top: .5em;
 }

@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(210,250,244,1) 100%);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(74, 240, 215, 0.308) 100%);
   color: #333;
   align-items: center;
   text-align: center;
@@ -13,6 +13,18 @@ body {
 
 img {
   border-radius: 5px;
-  max-width: 900px;
-  max-height: 700px;
+  width: 800px;
+  height: 700px;
+}
+
+button {
+
+    background: #bbecb134 ;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin-left: .5em;
 }

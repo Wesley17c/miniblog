@@ -1,41 +1,27 @@
-/* .container_post{
+ .container_post{
 
     display: flex;
     flex-direction: column;
     margin-top: 3em;
     padding-bottom: 3em;
+    box-sizing: border-box;
+    align-items: center;
 }
 
-.container_post img {
-
-    width: 700px;
-    height: 600px;
-    border-radius: 5px;
-}
 
 .container_post h2 {
-    text-align: left;
-    font-size: 40px;
-    color: #333;
+    margin-top: 1em;
+    font-size: 26px;
+   
 }
 
 .container_tags{
     display: flex;
-    gap: 1em;
+    gap: .7em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
-.container_post p {
-    
-    font-size: 18px;
-    text-align: left;
-    color: #333;
-    
-    
-}
-
-.tag{
-    text-align: left;
-}
 
 .ler {
 
@@ -45,4 +31,4 @@
     color: #333;
     font-weight: bold;
     padding:10px ;
-} */
+} 

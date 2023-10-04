@@ -12,7 +12,8 @@ const PostDetails = ({ post }) => {
       </div>
 
       <div className={styles.container_tags}>
-        <p> Postagem criada por {post.createBy} </p>
+        <p> Postagem criada por: {post.createBy} </p>
+        <p>tags:</p>
         {Array.isArray(post.tagArray) &&
           post.tagArray.map((tag) => (
             <p key={tag}> 

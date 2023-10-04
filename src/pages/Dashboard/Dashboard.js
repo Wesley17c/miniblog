@@ -18,11 +18,11 @@ const Dashboard = () => {
   const { deleteDocument } = useDeleteDocument("post");
 
   return (
-    <div>
+    <div className={styles.wrapper_container}>
       {loading && <p>Carregando posts</p>}
 
       <div className={styles.acoes}>
-        <h2>Perfil de usuário</h2>
+        <h3>Perfil de usuário</h3>
 
         <h3> Gerencie seus posts</h3>
       </div>
