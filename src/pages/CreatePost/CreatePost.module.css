@@ -17,7 +17,7 @@
     margin: 0.2em 0;
     font-size: 42px;
     
-    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    background: linear-gradient(115deg, #070707 10%, #06301e 90%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -29,7 +29,7 @@
 
 .wrapper_container p{
     margin-bottom: 1.5em;
-     background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    background: linear-gradient(115deg, #070707 10%, #06301e 90%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
@@ -99,14 +99,14 @@
 }
 
 .btn{
-    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+    background: linear-gradient(115deg, #070707 10%, #06301e 90%);
     border-radius: 25px;
     width: 170px;
     cursor: pointer;
     padding: 10px;
     font-size: 15px;
     font-weight: 800;
-    
+    color: white;
     transition: 2ms;
     display: block;
     margin: auto;
@@ -114,7 +114,7 @@
 
 .btn:hover{
 
-    background: linear-gradient(115deg, #56d8e491 10%, #a001ea9a 90%);
+    background: linear-gradient(115deg, #07070796 10%rgba(6, 48, 30, 0.61)1e 90%);
     color: #333;
 }
 .error{

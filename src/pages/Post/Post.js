@@ -15,10 +15,10 @@ const Post = () => {
         <>
           <h1>{post.title} </h1>
           <img src={post.image} alt="imagem" />
-          <p> {post.title} </p>
+          <h2> {post.title} </h2>
           <p> {post.body} </p>
-          <h3> este post tratasse de</h3>
-          <div>
+          <h3> este post tratasse de:</h3>
+          <div className={styles.tags}>
             {Array.isArray(post.tagArray) &&
               post.tagArray.map((tag) => (
                 <p key={tag}>
