@@ -14,7 +14,7 @@
 .wrapper_container h2{
     margin: 0.2em 0;
     font-size: 42px;
-    color: white;
+    color: rgb(7, 7, 7);
     
      
     
@@ -26,7 +26,7 @@
     margin-bottom: 1.5em;
     font-size: 18px;
     font-weight: 700;
-    color: white;
+    color: rgb(3, 3, 3);
     text-align: center;
     
 }
@@ -49,7 +49,7 @@
 }
 
 .forms ::placeholder{
-    color: rgba(255, 255, 255, 0.342);
+    color: rgba(7, 7, 7, 0.664);
     
 }
 
@@ -57,7 +57,7 @@
     margin-bottom: 5px;
     font-size: 18px;
     font-weight: 600;
-    color: white;
+    color: rgb(7, 7, 7);
     
 }
 
@@ -66,12 +66,12 @@
 
     border: none;
     background-color: rgba(255, 255, 255, 0);
-    border-bottom: 1px solid #fdfcfc;
+    border-bottom: 1px solid #020202;
     padding: 10px;
     width: 400px;
-    caret-color: white;
+    caret-color: rgb(3, 3, 3);
     outline: none;
-    color: white;
+    color: rgb(3, 3, 3);
     
 }
 
@@ -79,18 +79,18 @@
 
     border: none;
     background-color: rgba(255, 255, 255, 0);
-    border-bottom: 1px solid #fdfcfc;
+    border-bottom: 1px solid #070707;
     padding: 10px;
     width: 400px;
-    caret-color: white;
+    caret-color: rgb(3, 3, 3);
     outline: none;
-    color: white;
+    color: rgb(0, 0, 0);
     
 }
 
 .forms input:focus {
     outline: none;
-    border-bottom: 1px solid #fdfcfc;
+    border-bottom: 1px solid #030303;
 }
 
 .btn{
@@ -101,7 +101,7 @@
     padding: 10px;
     font-size: 15px;
     font-weight: 800;
-    color: white;
+    color: rgb(5, 5, 5);
     transition: 2ms;
     display: block;
     margin: auto;
